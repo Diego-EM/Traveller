@@ -1,0 +1,110 @@
+#ticket-search {
+  position: relative;
+  height: 66vh;
+  width: 100%;
+}
+
+.ticket-bg {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-image: url("../assets/img/panorama.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  filter: brightness(0.7) saturate(1.4) hue-rotate(341deg);
+  z-index: 0;
+}
+
+.ticket-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  height: 100%;
+  z-index: 100;
+}
+.ticket-container h1 {
+  width: 60%;
+  min-width: 250px;
+  margin-bottom: 19px;
+  color: #F0F0F0;
+  font-size: 2.5em;
+  text-align: center;
+}
+
+#about-us {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  position: relative;
+  padding: 40px 60px;
+}
+#about-us h2 {
+  font-size: 2em;
+  color: #2682D7;
+}
+#about-us p {
+  margin: 10px 0;
+  color: #14161E;
+  font-size: 1.1em;
+  text-align: justify;
+}
+#about-us .content-container {
+  width: 50%;
+  min-width: 250px;
+}
+#about-us .bg-bus {
+  position: absolute;
+  right: 55px;
+  bottom: -54px;
+  width: 357px;
+  filter: opacity(0.3);
+  z-index: -1;
+}
+
+#our-services {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 60px;
+  background-color: #2682D7;
+  z-index: 1000;
+  color: #F0F0F0;
+}
+#our-services h2 {
+  font-size: 2em;
+}
+#our-services p {
+  width: 50%;
+  min-width: 250px;
+  margin: 10px 0;
+  font-size: 1.1em;
+  text-align: center;
+}
+#our-services .content-container {
+  display: flex;
+  justify-content: space-evenly;
+  width: 50%;
+  min-width: 250px;
+  margin: 20px 0;
+}
+#our-services .content-container .service-icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+#our-services .content-container .service-icon img {
+  width: 100px;
+  aspect-ratio: 1/1;
+}
+#our-services .content-container .service-icon figcaption {
+  font-size: 1.1em;
+  font-weight: 500;
+}
+
+/*# sourceMappingURL=HomePage.css.map */

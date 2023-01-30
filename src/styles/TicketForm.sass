@@ -1,0 +1,51 @@
+@import "global_styles.sass"
+    
+.ticket-form
+    display: flex
+    flex-wrap: wrap
+    align-items: end
+    justify-content: center
+    gap: 10px
+    width: 60%
+    min-width: 250px
+
+    label
+        display: flex
+        flex-direction: column
+        color: $white
+        font-size: 1em
+
+    input
+        height: 35px
+        width: 200px
+        padding: 3px 15px
+        border: 1px solid $white
+        border-radius: 4px
+        color: $white
+        font-size: 1em
+
+        &::placeholder
+            color: $white
+
+    #submit-form
+        display: flex
+        align-items: center
+        justify-content: center
+        gap: 7px
+        height: 35px
+        width: 200px
+        border-radius: 4px
+        background: $blue
+        border: none
+        color: $white
+        font-size: 1em
+        font-weight: 600
+        cursor: pointer
+        transition: filter 150ms
+
+        img
+            width: 18px
+            aspect-ratio: 1/1
+
+        &:hover
+            filter: brightness(1.1)

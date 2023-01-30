@@ -1,0 +1,40 @@
+.main-header {
+  position: fixed;
+  width: 100vw;
+  transition: background 150ms;
+  z-index: 100000000;
+}
+.main-header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 10px 30px;
+  font-size: 20px;
+}
+.main-header .nav-links {
+  display: flex;
+  gap: 25px;
+  font-weight: normal;
+}
+.main-header .nav-links a {
+  color: #F0F0F0;
+}
+
+#logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #F0F0F0;
+  font-weight: 500;
+}
+#logo img {
+  width: 30px;
+  aspect-ratio: 1/1;
+}
+
+.scrolled {
+  background-color: #1F70BB;
+}
+
+/*# sourceMappingURL=MainNav.css.map */

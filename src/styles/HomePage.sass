@@ -1,0 +1,105 @@
+@import "global_styles.sass"
+
+#ticket-search
+    position: relative
+    height: 66vh
+    width: 100%
+
+.ticket-bg
+    position: absolute
+    top: 0
+    height: 100%
+    width: 100%
+    background-image: url('../assets/img/panorama.jpg')
+    background-position: center
+    background-repeat: no-repeat
+    background-size: cover
+    filter: brightness(0.7) saturate(1.4) hue-rotate(341deg)
+    z-index: 0
+
+.ticket-container
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+    position: relative
+    height: 100%
+    z-index: 100
+
+    h1
+        width: 60%
+        min-width: 250px
+        margin-bottom: 19px
+        color: $white
+        font-size: 2.5em
+        text-align: center
+
+#about-us
+    display: flex
+    justify-content: flex-start
+    align-items: center
+    position: relative
+    padding: 40px 60px
+
+    h2
+        font-size: 2em
+        color: $blue
+
+    p
+        margin: 10px 0
+        color: $dark
+        font-size: 1.1em
+        text-align: justify
+
+    .content-container
+        width: 50%
+        min-width: 250px
+
+    .bg-bus
+        position: absolute
+        right: 55px
+        bottom: -54px
+        width: 357px
+        filter: opacity(0.3)
+        z-index: -1
+
+#our-services
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    padding: 40px 60px
+    background-color: $blue
+    z-index: 1000
+    color: $white
+
+    h2
+        font-size: 2em
+
+    p
+        width: 50%
+        min-width: 250px
+        margin: 10px 0
+        font-size: 1.1em
+        text-align: center
+
+    .content-container
+        display: flex
+        justify-content: space-evenly
+        width: 50%
+        min-width: 250px
+        margin: 20px 0
+
+        .service-icon
+            display: flex
+            flex-direction: column
+            align-items: center
+            gap: 10px
+
+            img
+                width: 100px
+                aspect-ratio: 1/1
+
+            figcaption
+                font-size: 1.1em
+                font-weight: 500

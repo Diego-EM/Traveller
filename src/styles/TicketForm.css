@@ -1,0 +1,52 @@
+.ticket-form {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: end;
+  justify-content: center;
+  gap: 10px;
+  width: 60%;
+  min-width: 250px;
+}
+.ticket-form label {
+  display: flex;
+  flex-direction: column;
+  color: #F0F0F0;
+  font-size: 1em;
+}
+.ticket-form input {
+  height: 35px;
+  width: 200px;
+  padding: 3px 15px;
+  border: 1px solid #F0F0F0;
+  border-radius: 4px;
+  color: #F0F0F0;
+  font-size: 1em;
+}
+.ticket-form input::placeholder {
+  color: #F0F0F0;
+}
+.ticket-form #submit-form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  height: 35px;
+  width: 200px;
+  border-radius: 4px;
+  background: #2682D7;
+  border: none;
+  color: #F0F0F0;
+  font-size: 1em;
+  font-weight: 600;
+  cursor: pointer;
+  transition: filter 150ms;
+}
+.ticket-form #submit-form img {
+  width: 18px;
+  aspect-ratio: 1/1;
+}
+.ticket-form #submit-form:hover {
+  filter: brightness(1.1);
+}
+
+/*# sourceMappingURL=TicketForm.css.map */
