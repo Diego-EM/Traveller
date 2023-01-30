@@ -10,6 +10,11 @@ interface BusTicket extends RowDataPacket {
     estimatedTime: string
 }
 
+interface Place extends RowDataPacket {
+    leaving?: string,
+    depart?: string
+}
+
  const router: Router = express.Router();
 
  router.post('/tickets',(req: Request, res: Response)=>{
@@ -37,9 +42,30 @@ interface BusTicket extends RowDataPacket {
                 if (err)
                     console.log(err.message)
             })
-    } else {
+    } else
         res.json({msg: "Please enter all required data"});
+ })
+
+ router.post('/search',(req: Request,res: Response)=>{
+    const { placeQuery, isLeaving } = req.body;
+    let places: (string|undefined)[] = [];
+    if (placeQuery) {
+        const query = `SELECT DISTINCT ${isLeaving ? 'leaving' : 'depart'} FROM bus_trips WHERE ${isLeaving ? 'leaving' : 'depart'} LIKE ?`;
+        connection.query(query,[placeQuery.concat('%')])
+            .on('result',(result: Place)=>{
+                if (isLeaving)
+                    places = [...places, result.leaving];
+                else
+                    places = [...places, result.depart];
+            })
+            .on('end',()=>res.json({msg:'ok', places}))
+            .on('error',(err: QueryError)=> {
+                if (err)
+                    console.log(err.message)
+            })
     }
+    else
+        res.json({msg: "Please enter all required data"});
  })
 
  export default router;

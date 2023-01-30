@@ -35,8 +35,28 @@ router.post('/tickets', function (req, res) {
                 console.log(err.message);
         });
     }
-    else {
+    else
         res.json({ msg: "Please enter all required data" });
+});
+router.post('/search', function (req, res) {
+    var _a = req.body, placeQuery = _a.placeQuery, isLeaving = _a.isLeaving;
+    var places = [];
+    if (placeQuery) {
+        var query = "SELECT DISTINCT ".concat(isLeaving ? 'leaving' : 'depart', " FROM bus_trips WHERE ").concat(isLeaving ? 'leaving' : 'depart', " LIKE ?");
+        db_1["default"].query(query, [placeQuery.concat('%')])
+            .on('result', function (result) {
+            if (isLeaving)
+                places = __spreadArray(__spreadArray([], places, true), [result.leaving], false);
+            else
+                places = __spreadArray(__spreadArray([], places, true), [result.depart], false);
+        })
+            .on('end', function () { return res.json({ msg: 'ok', places: places }); })
+            .on('error', function (err) {
+            if (err)
+                console.log(err.message);
+        });
     }
+    else
+        res.json({ msg: "Please enter all required data" });
 });
 exports["default"] = router;
