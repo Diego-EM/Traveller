@@ -1,0 +1,55 @@
+label {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  color: #F0F0F0;
+  font-size: 1em;
+}
+
+input {
+  height: 35px;
+  width: 200px;
+  padding: 3px 15px;
+  border: 1px solid #F0F0F0;
+  border-radius: 4px;
+  color: #F0F0F0;
+  font-size: 1em;
+}
+input::placeholder {
+  color: #F0F0F0;
+}
+input::-webkit-calendar-picker-indicator {
+  filter: invert(1);
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 57px;
+  width: 100%;
+  background-color: #F0F0F0;
+  color: #1F70BB;
+  font-size: 1em;
+  z-index: 1000;
+}
+.dropdown-menu li {
+  display: flex;
+  gap: 8px;
+  width: 100%;
+  padding: 5px 10px;
+  cursor: pointer;
+  transition: background 100ms;
+}
+.dropdown-menu li:hover {
+  background-color: #1F70BB;
+  color: #F0F0F0;
+}
+.dropdown-menu img {
+  width: 18px;
+  aspect-ratio: 1/1;
+}
+
+.hidden {
+  display: none;
+}
+
+/*# sourceMappingURL=FormInputs.css.map */

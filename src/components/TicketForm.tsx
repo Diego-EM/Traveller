@@ -1,26 +1,18 @@
 import React from 'react'
 import SearchIcon from '../assets/svg/search.svg';
 import '../styles/TicketForm.css'
+import { DateInput, TextInput } from './FormInputs';
 
 const TicketForm = () => {
   return (
     <form className='ticket-form'>
-        <label htmlFor="">From
-          <input type="text" placeholder='Leaving from'/>
-        </label>
-        <label htmlFor="">To
-          <input type="text" placeholder='Going to'/>
-        </label>
-        <label htmlFor="">Depart
-          <input type="date" placeholder='Select a date'/>
-        </label>
-        <label htmlFor="">Passengers
-          <input type="select" />
-        </label>
-        <button type="submit" id='submit-form'>
-            <img src={SearchIcon} alt="search" />
-            Search
-        </button>
+      <TextInput inputLabel='From' inputName='from' inputPlaceholder='Leaving from'/>
+      <TextInput inputLabel='To' inputName='to' inputPlaceholder='Going to'/>
+      <DateInput inputLabel='Depart' inputName='date' inputPlaceholder='Select a date'/>
+      <button type="submit" id='submit-form'>
+          <img src={SearchIcon} alt="search" />
+          Search
+      </button>
     </form>
   )
 }

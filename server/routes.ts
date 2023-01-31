@@ -49,7 +49,7 @@ interface Place extends RowDataPacket {
  router.post('/search',(req: Request,res: Response)=>{
     const { placeQuery, isLeaving } = req.body;
     let places: (string|undefined)[] = [];
-    if (placeQuery) {
+    if (placeQuery !== undefined) {
         const query = `SELECT DISTINCT ${isLeaving ? 'leaving' : 'depart'} FROM bus_trips WHERE ${isLeaving ? 'leaving' : 'depart'} LIKE ?`;
         connection.query(query,[placeQuery.concat('%')])
             .on('result',(result: Place)=>{

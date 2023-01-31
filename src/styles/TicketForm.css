@@ -7,24 +7,6 @@
   width: 60%;
   min-width: 250px;
 }
-.ticket-form label {
-  display: flex;
-  flex-direction: column;
-  color: #F0F0F0;
-  font-size: 1em;
-}
-.ticket-form input {
-  height: 35px;
-  width: 200px;
-  padding: 3px 15px;
-  border: 1px solid #F0F0F0;
-  border-radius: 4px;
-  color: #F0F0F0;
-  font-size: 1em;
-}
-.ticket-form input::placeholder {
-  color: #F0F0F0;
-}
 .ticket-form #submit-form {
   display: flex;
   align-items: center;

@@ -41,7 +41,7 @@ router.post('/tickets', function (req, res) {
 router.post('/search', function (req, res) {
     var _a = req.body, placeQuery = _a.placeQuery, isLeaving = _a.isLeaving;
     var places = [];
-    if (placeQuery) {
+    if (placeQuery !== undefined) {
         var query = "SELECT DISTINCT ".concat(isLeaving ? 'leaving' : 'depart', " FROM bus_trips WHERE ").concat(isLeaving ? 'leaving' : 'depart', " LIKE ?");
         db_1["default"].query(query, [placeQuery.concat('%')])
             .on('result', function (result) {
