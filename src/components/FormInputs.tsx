@@ -31,7 +31,6 @@ export const TextInput: FC<InputProps> = ({inputLabel, inputName, inputPlacehold
             if (placesList.length > 0) {
                 dataList.current?.classList.toggle('hidden');
             }
-            console.log(e)
         }, 100);
     }
 

@@ -3,17 +3,19 @@ import { BrowserRouter as Router, Routes, Route  } from 'react-router-dom';
 import MainNav from './components/MainNav';
 import './App.css';
 import HomePage from './pages/HomePage';
-import { helperFetchTicketsData } from './helpers/helperFetchTickets';
+import { TicketProvider } from './contexts/TicketContext';
 
 function App() {
   return (
     <>
-      <Router>
-        <MainNav />
-        <Routes>
-          <Route path='/' element={<HomePage/>}></Route>
-        </Routes>
-      </Router>
+      <TicketProvider>
+        <Router>
+          <MainNav />
+          <Routes>
+            <Route path='/' element={<HomePage/>}></Route>
+          </Routes>
+        </Router>
+      </TicketProvider>
     </>
   );
 }

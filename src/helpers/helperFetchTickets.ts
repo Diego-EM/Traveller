@@ -1,9 +1,4 @@
-interface SearchTicket {
-    from: string,
-    to: string,
-    dateStart: string,
-    dateEnd: string,
-}
+import { SearchTicket } from '../interfaces/SearchInterface'
 
 interface SearchPlace {
     placeQuery: string,
