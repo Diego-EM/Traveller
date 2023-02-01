@@ -23,12 +23,11 @@ interface Place extends RowDataPacket {
         from,
         to,
         dateStart,
-        dateEnd,
-        passengers
+        dateEnd
     } = req.body;
-    if (from && to && dateStart && dateEnd && passengers){
-        const query = "SELECT * FROM bus_trips WHERE leaving=? AND depart=? AND date BETWEEN ? AND ? AND ?<=available";
-        connection.query(query,[from,to,dateStart, dateEnd,passengers])
+    if (from && to && dateStart && dateEnd){
+        const query = "SELECT * FROM bus_trips WHERE leaving=? AND depart=? AND date BETWEEN ? AND ?";
+        connection.query(query,[from,to,dateStart,dateEnd])
             .on('result',(result: BusTicket)=>{
                 results = [...results, result];
             })

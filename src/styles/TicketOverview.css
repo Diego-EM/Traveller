@@ -1,0 +1,75 @@
+.ticket-card {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0;
+  padding: 10px 20px;
+  background-color: #EFEFF2;
+  border-radius: 4px;
+}
+.ticket-card .card-bus img {
+  width: 110px;
+  aspect-ratio: 1;
+}
+.ticket-card .card-bus figcaption {
+  font-weight: 200;
+}
+.ticket-card .card-trip {
+  justify-content: center;
+}
+.ticket-card .card-trip div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.ticket-card .card-trip .trip-title {
+  font-size: 1em;
+  font-weight: 500;
+}
+.ticket-card .card-trip .trip-description {
+  font-size: 1.9em;
+  font-weight: 600;
+}
+.ticket-card .card-ticket {
+  justify-content: space-between;
+}
+.ticket-card .card-ticket .ticket-available, .ticket-card .card-ticket .ticket-price {
+  font-size: 1em;
+  font-weight: 600;
+  color: #14161E;
+}
+.ticket-card .card-ticket .ticket-available {
+  align-self: flex-end;
+}
+.ticket-card .card-ticket .ticket-price span {
+  margin-left: 5px;
+  font-size: 2.5em;
+  font-weight: 700;
+}
+.ticket-card .card-ticket .ticket-button {
+  width: 100%;
+  padding: 5px 57px;
+  background-color: #57B248;
+  border-radius: 4px;
+  color: #F0F0F0;
+  font-size: 1em;
+  font-weight: 600;
+  cursor: pointer;
+  transition: filter 100ms;
+}
+.ticket-card .card-ticket .ticket-button:hover {
+  filter: brightness(1.01);
+}
+
+.card-ticket, .card-trip {
+  display: flex;
+  flex-direction: column;
+}
+
+.card-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #14161E;
+}
+
+/*# sourceMappingURL=TicketOverview.css.map */

@@ -1,0 +1,73 @@
+@import './global_styles'
+
+.ticket-card
+    display: flex
+    justify-content: space-between
+    margin: 10px 0
+    padding: 10px 20px
+    background-color: $white-card
+    border-radius: 4px
+
+    .card-bus
+        img
+            width: 110px
+            aspect-ratio: 1
+
+        figcaption
+            font-weight: 200
+
+    .card-trip
+        justify-content: center
+
+        div
+            display: flex
+            flex-direction: column
+            align-items: center
+
+        .trip-title
+            font-size: 1em
+            font-weight: 500
+
+        .trip-description
+            font-size: 1.9em
+            font-weight: 600
+
+    .card-ticket
+        justify-content: space-between
+
+        .ticket-available, .ticket-price
+            font-size: 1em
+            font-weight: 600
+            color: $dark
+
+        .ticket-available
+            align-self: flex-end
+
+        .ticket-price span
+            margin-left: 5px
+            font-size: 2.5em
+            font-weight: 700
+
+        .ticket-button
+            width: 100%
+            padding: 5px 57px
+            background-color: $green
+            border-radius: 4px
+            color: $white
+            font-size: 1em
+            font-weight: 600
+            cursor: pointer
+            transition: filter 100ms
+
+            &:hover
+                filter: brightness(1.01)
+
+.card-ticket, .card-trip
+    display: flex
+    flex-direction: column
+
+.card-content
+    display: flex
+    flex-direction: column
+    align-items: center
+    color: $dark

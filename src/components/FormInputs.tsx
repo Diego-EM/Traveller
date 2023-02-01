@@ -7,9 +7,10 @@ interface InputProps {
     inputLabel: string,
     inputName: string,
     inputPlaceholder: string,
+    dark?: boolean
 }
 
-export const TextInput: FC<InputProps> = ({inputLabel, inputName, inputPlaceholder}) => {
+export const TextInput: FC<InputProps> = ({inputLabel, inputName, inputPlaceholder, dark=false}) => {
     const URL = 'http://localhost:8080';
     const getBusTicketData = helperFetchTicketsData(URL,'POST');
 
@@ -43,9 +44,9 @@ export const TextInput: FC<InputProps> = ({inputLabel, inputName, inputPlacehold
         getBusTicketData('/search',placeInput)
         .then(data => {
             if (data.places)
-            setPlacesList(data.places);
+                setPlacesList(data.places);
             else
-            console.log(data.msg);
+                console.log(data.msg);
         })
         .catch(err => console.log(err))
 
@@ -56,6 +57,7 @@ export const TextInput: FC<InputProps> = ({inputLabel, inputName, inputPlacehold
         <input
             type="text"
             autoComplete="off"
+            className={dark ? 'dark' : ""}
             ref={textInput}
             name={inputName}
             placeholder={inputPlaceholder}
@@ -75,10 +77,15 @@ export const TextInput: FC<InputProps> = ({inputLabel, inputName, inputPlacehold
   )
 }
 
-export const DateInput: FC<InputProps> = ({inputLabel, inputName, inputPlaceholder}) =>{
+export const DateInput: FC<InputProps> = ({inputLabel, inputName, inputPlaceholder, dark=false}) =>{
     return(
     <label htmlFor={inputName}>{inputLabel}
-        <input name={inputName} type="date"  autoComplete="off" placeholder={inputPlaceholder}/>
+        <input
+            type="date"
+            autoComplete="off"
+            className={dark ? 'dark' : ""}
+            name={inputName}
+            placeholder={inputPlaceholder}/>
     </label>
     );
 }

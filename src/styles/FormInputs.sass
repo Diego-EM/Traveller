@@ -47,5 +47,15 @@ input
         width: 18px
         aspect-ratio: 1/1
 
+.dark
+    border-color: $dark
+    color: $dark
+
+    &::placeholder
+        color: $dark
+
+    &::-webkit-calendar-picker-indicator
+        filter: none
+
 .hidden
     display: none    

@@ -4,3 +4,16 @@ export interface SearchTicket {
     dateStart: string|number,
     dateEnd: string|number,
 }
+
+export interface BusTicket {
+    leaving: string,
+    depart: string,
+    date: string,
+    available: number,
+    estimatedTime: string
+}
+
+export interface TicketsResults {
+    msg: string,
+    results?: BusTicket[]
+}

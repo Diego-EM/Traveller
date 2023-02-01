@@ -17,10 +17,10 @@ var db_1 = __importDefault(require("./db"));
 var router = express_1["default"].Router();
 router.post('/tickets', function (req, res) {
     var results = [];
-    var _a = req.body, from = _a.from, to = _a.to, dateStart = _a.dateStart, dateEnd = _a.dateEnd, passengers = _a.passengers;
-    if (from && to && dateStart && dateEnd && passengers) {
-        var query = "SELECT * FROM bus_trips WHERE leaving=? AND depart=? AND date BETWEEN ? AND ? AND ?<=available";
-        db_1["default"].query(query, [from, to, dateStart, dateEnd, passengers])
+    var _a = req.body, from = _a.from, to = _a.to, dateStart = _a.dateStart, dateEnd = _a.dateEnd;
+    if (from && to && dateStart && dateEnd) {
+        var query = "SELECT * FROM bus_trips WHERE leaving=? AND depart=? AND date BETWEEN ? AND ?";
+        db_1["default"].query(query, [from, to, dateStart, dateEnd])
             .on('result', function (result) {
             results = __spreadArray(__spreadArray([], results, true), [result], false);
         })

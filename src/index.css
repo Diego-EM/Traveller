@@ -20,7 +20,7 @@ a {
   text-decoration: none;
 }
 
-input {
+input, button {
   border: none;
   background: none;
 }
